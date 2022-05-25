@@ -1,4 +1,14 @@
 {
     "schemaVersion": 2,
-    "templateId": "python-django/3.6.2rc1"
+    "dockerfileLines": [
+        "FROM library/python:3.9.13",
+        "RUN apk update && apk upgrade && apk add --no-cache make g++ bash git openssh postgresql-dev curl",
+        "RUN mkdir -p /usr/src/app",
+        "WORKDIR /usr/src/app",
+        "COPY ./ /usr/src/app",
+        "RUN make install",
+        "COPY ./utils/ /usr/src/utils",
+        "EXPOSE 80",
+        "RUN make develop"
+    ]
 }
