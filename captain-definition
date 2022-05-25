@@ -10,6 +10,6 @@
         "RUN make install",
         "COPY ./utils/ /usr/src/utils",
         "EXPOSE 80",
-        "RUN make develop"
+        "poetry run python manage.py runserver 0.0.0.0:80"
     ]
 }
