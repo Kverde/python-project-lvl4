@@ -5,6 +5,7 @@
         "RUN mkdir -p /usr/src/app",
         "WORKDIR /usr/src/app",
         "COPY ./ /usr/src/app",
+        "RUN poetry install",
         "RUN make install",
         "COPY ./utils/ /usr/src/utils",
         "EXPOSE 80",
