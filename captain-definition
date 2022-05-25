@@ -10,6 +10,7 @@
         "RUN make install",
         "COPY ./utils/ /usr/src/utils",
         "EXPOSE 80",
+        "ENV PYTHONUNBUFFERED=1",
         "RUN poetry run python manage.py runserver 0.0.0.0:80"
     ]
 }
