@@ -9,3 +9,6 @@ django_shell:
 
 develop:
 	poetry run python manage.py runserver
+
+prod:
+	
