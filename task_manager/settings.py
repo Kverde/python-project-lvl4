@@ -28,7 +28,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'webserver',
-    '127.0.0.1'
+    '127.0.0.1',
+    'test-django.caprover.zarya.xyz'
 ]
 
 STATIC_ROOT = STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
