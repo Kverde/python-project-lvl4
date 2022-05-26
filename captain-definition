@@ -1,16 +1,4 @@
 {
     "schemaVersion": 2,
-    "dockerfileLines": [
-        "FROM library/python:3.9.13",
-        "RUN python -m pip install poetry",
-        "RUN mkdir -p /usr/src/app",
-        "WORKDIR /usr/src/app",
-        "COPY ./ /usr/src/app",
-        "RUN poetry install",
-        "RUN make install",
-        "COPY ./utils/ /usr/src/utils",
-        "EXPOSE 80",
-        "ENV PYTHONUNBUFFERED=1",
-        "RUN ./utils/run.sh"
-    ]
+    "dockerfilePath": "./DockerFile"
 }
