@@ -32,8 +32,7 @@ ALLOWED_HOSTS = [
     'test-django.caprover.zarya.xyz'
 ]
 
-# STATIC_ROOT = STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_ROOT = '/usr/src/static'
+STATIC_ROOT = STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Application definition
 
